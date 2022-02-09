@@ -3,6 +3,8 @@ Super simple QB-Pilotjob with Paychecks, easy to use and customise.
 
  ----------------------------
     Made by HIJINX#0001     
+https://redemption-rp.tebex.io/
+https://discord.gg/PNzWQ2hMcy -- For Support
  ---------------------------- 
 Add this into your qb-core/shared/job.lua     
     
@@ -48,4 +50,6 @@ On A new line put:
 
  ----------------------------
     Made by HIJINX#0001     
+https://redemption-rp.tebex.io/
+https://discord.gg/PNzWQ2hMcy -- For Support
  ---------------------------- 
