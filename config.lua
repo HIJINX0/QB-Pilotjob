@@ -12,6 +12,8 @@ Keys = {
 Config = {}
 
 Config.BailPrice = 250
+Config.JobName = "planepilot"
+Config.JobNeeded = false 
 
 Config.Locations = {
     ["main"] = {

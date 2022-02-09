@@ -64,7 +64,7 @@ AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
     local OldlayerJob = PlayerJob.name
     PlayerJob = JobInfo
 
-    if PlayerJob.name == "unemployed" or PlayerJob.name == "planepilot" then
+    if PlayerJob.name == Config.JobName or not Config.JobNeeded then
         TruckVehBlip = AddBlipForCoord(Config.Locations["vehicle"].coords.x, Config.Locations["vehicle"].coords.y, Config.Locations["vehicle"].coords.z)
         SetBlipSprite(TruckVehBlip, 307)
         SetBlipDisplay(TruckVehBlip, 4)
@@ -92,7 +92,7 @@ Citizen.CreateThread(function()
     while true do 
         Citizen.Wait(1)
         if isLoggedIn and QBCore ~= nil then
-            if PlayerJob.name == "unemployed" or PlayerJob.name == "planepilot" then
+            if PlayerJob.name == Config.JobName or not Config.JobNeeded then
                 if IsControlJustReleased(0, Keys["DEL"]) then
                     if IsPedInAnyVehicle(PlayerPedId()) and isTruckerVehicle(GetVehiclePedIsIn(PlayerPedId(), false)) then
                         getNewLocation()
@@ -357,7 +357,7 @@ AddEventHandler('HIJINX-Pilotjob:client:SpawnVehicle', function()
     local vehicleInfo = selectedVeh
     local coords = Config.Locations["vehicle"].coords
     QBCore.Functions.SpawnVehicle(vehicleInfo, function(veh)
-        SetVehicleNumberPlateText(veh, "BANK"..tostring(math.random(1000, 9999)))
+        SetVehicleNumberPlateText(veh, "JiNX"..tostring(math.random(1000, 9999)))
         SetEntityHeading(veh, coords.h)
         exports['LegacyFuel']:SetFuel(veh, 100.0)
         closeMenuFull()

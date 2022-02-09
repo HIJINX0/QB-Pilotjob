@@ -15,7 +15,7 @@ Add this into your qb-core/shared/job.lua
         },
     },
 --------------------------------------------------------------------
-                   The next step is optinal.                       
+                   The next step is optional.                       
 --------------------------------------------------------------------
 
 You can also add this into the qb-cityhall/server/main.lua
